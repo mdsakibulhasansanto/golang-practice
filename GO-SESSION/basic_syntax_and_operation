@@ -16,12 +16,82 @@ func main() {
 	var p *int = &num // Pointer declaration, storing the address of 'num'
 
 	// Printing the values
-	fmt.Println("Value of num:", num)         // Prints the value 10
-	fmt.Println("Value of name:", name)       // Prints "Santo"
-	fmt.Println("Address of num (pointer p):", p) // Prints memory address like 0xc000012078
-	fmt.Println("Value of names:", names)     // Prints "santo"
-
-	// Pointer dereference to get the value from address
-	// Dereferencing মানে হলো pointer যেই মেমোরি address ধরে রেখেছে, সেখানে গিয়ে ভ্যালু পড়া
+	fmt.Println("Value of num:", num)               // Prints the value 10
+	fmt.Println("Value of name:", name)             // Prints "Santo"
+	fmt.Println("Address of num (pointer p):", p)   // Prints memory address like 0xc000012078
+	fmt.Println("Value of names:", names)           // Prints "santo"
 	fmt.Println("Value at address stored in p:", *p) // Dereferencing pointer p → gives 10
+
+	// ----------------------------
+	// Arithmetic Operators
+	// ----------------------------
+	a := 20
+	b := 7
+
+	fmt.Println("\n--- Arithmetic Operators ---")
+	fmt.Println("a + b =", a+b)
+	fmt.Println("a - b =", a-b)
+	fmt.Println("a * b =", a*b)
+	fmt.Println("a / b =", a/b)
+	fmt.Println("a % b =", a%b)
+
+	// ----------------------------
+	// Assignment Operators
+	// ----------------------------
+	fmt.Println("\n--- Assignment Operators ---")
+	c := 15
+	c += 5 // c = c + 5
+	fmt.Println("c += 5 ->", c)
+	c -= 3
+	fmt.Println("c -= 3 ->", c)
+	c *= 2
+	fmt.Println("c *= 2 ->", c)
+	c /= 4
+	fmt.Println("c /= 4 ->", c)
+	c %= 5
+	fmt.Println("c %= 5 ->", c)
+
+	// ----------------------------
+	// Comparison Operators
+	// ----------------------------
+	fmt.Println("\n--- Comparison Operators ---")
+	x := 10
+	y := 20
+	fmt.Println("x == y:", x == y)
+	fmt.Println("x != y:", x != y)
+	fmt.Println("x > y:", x > y)
+	fmt.Println("x < y:", x < y)
+	fmt.Println("x >= y:", x >= y)
+	fmt.Println("x <= y:", x <= y)
+
+	// ----------------------------
+	// Logical Operators
+	// ----------------------------
+	fmt.Println("\n--- Logical Operators ---")
+	p1 := true
+	p2 := false
+	fmt.Println("p1 && p2:", p1 && p2)
+	fmt.Println("p1 || p2:", p1 || p2)
+	fmt.Println("!p1:", !p1)
+
+	// ----------------------------
+	// Bitwise Operators
+	// ----------------------------
+	fmt.Println("\n--- Bitwise Operators ---")
+	b1 := 6   // 0110
+	b2 := 10  // 1010
+	fmt.Println("b1 & b2:", b1 & b2)   // 0010 → 2
+	fmt.Println("b1 | b2:", b1 | b2)   // 1110 → 14
+	fmt.Println("b1 ^ b2:", b1 ^ b2)   // 1100 → 12
+	fmt.Println("b1 &^ b2:", b1 &^ b2) // Clear bits of b2 in b1 → 0110 &^ 1010 = 0100 → 4
+	fmt.Println("b1 << 1:", b1 << 1)   // 0110 → 1100 → 12
+	fmt.Println("b1 >> 1:", b1 >> 1)   // 0110 → 0011 → 3
+
+	// ----------------------------
+	//  Pointer Operators
+	// ----------------------------
+	fmt.Println("\n--- Pointer Operators ---")
+	ptr := &x
+	fmt.Println("Address of x:", ptr)
+	fmt.Println("Value at pointer ptr:", *ptr)
 }
