@@ -16,10 +16,10 @@ func main() {
 	var p *int = &num // Pointer declaration, storing the address of 'num'
 
 	// Printing the values
-	fmt.Println("Value of num:", num)             // Prints the value 10
-	fmt.Println("Value of name:", name)           // Prints "Santo"
+	fmt.Println("Value of num:", num)         // Prints the value 10
+	fmt.Println("Value of name:", name)       // Prints "Santo"
 	fmt.Println("Address of num (pointer p):", p) // Prints memory address like 0xc000012078
-	fmt.Println("Value of names:", names)         // Prints "santo"
+	fmt.Println("Value of names:", names)     // Prints "santo"
 
 	// Pointer dereference to get the value from address
 	// Dereferencing মানে হলো pointer যেই মেমোরি address ধরে রেখেছে, সেখানে গিয়ে ভ্যালু পড়া
