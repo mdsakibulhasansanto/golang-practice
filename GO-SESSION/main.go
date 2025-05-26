@@ -15,7 +15,14 @@ func main() {
 
 	var p *int = &num // Pointer declaration, storing the address of 'num'
 
+	const (
+		low = iota + 1 // iota = 0
+		medium
+		high
+	)
+
 	// Printing the values
+	fmt.Println(low, medium, high)
 	fmt.Println("Value of num:", num)             // Prints the value 10
 	fmt.Println("Value of name:", name)           // Prints "Santo"
 	fmt.Println("Address of num (pointer p):", p) // Prints memory address like 0xc000012078
