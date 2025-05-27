@@ -1,26 +1,42 @@
 package main
 
 import (
-	"bufio"
 	"fmt"
-	"os"
 )
 
 func main() {
+	var num1, num2 float32
 
-	//fmt.Println("Md Santo")
-	var name string
-	var age int
-	//fmt.Scan(&name)
-	//fmt.Scanln(&name)
-	fmt.Scanf("%s : %d", &name, &age)
-	//fmt.Println("You name : ", name, " ", age)
-	fmt.Printf("Your name : %s , Your age  %d\n ", name, age)
+	// Addition
+	fmt.Println("\t--- Addition ---")
+	fmt.Print("\tEnter two numbers for addition: ")
+	fmt.Scanln(&num1, &num2)
+	resultSum := num1 + num2
+	fmt.Printf("\tThe sum of %.2f and %.2f == %.2f\n\n", num1, num2, resultSum)
 
-	bufio.NewReader(os.Stdin).ReadString('\n')
-	// Reader crate
-	reader := bufio.NewReader(os.Stdin)
-	sentance, _ := reader.ReadString('\n')
-	println(sentance)
+	// Subtraction
+	fmt.Println("\t--- Subtraction ---")
+	fmt.Print("\tEnter two numbers for subtraction: ")
+	fmt.Scanln(&num1, &num2)
+	resultSub := num1 - num2
+	fmt.Printf("\tThe subtraction of %.2f and %.2f == %.2f\n\n", num1, num2, resultSub)
+	// Multiplication
+	fmt.Println("\t--- Multiplication ---")
+	fmt.Print("\tEnter two numbers for multiplication: ")
+	fmt.Scanln(&num1, &num2)
+	resultMultiplication := num1 * num2
+	fmt.Printf("\tThe multiplication of %.2f and %.2f == %.2f\n\n", num1, num2, resultMultiplication)
 
+	// Division
+	fmt.Println("\t--- Division ---")
+	fmt.Print("\tEnter two numbers for division: ")
+	fmt.Scanln(&num1, &num2)
+	if num2 != 0 {
+		resultDivision := num1 / num2
+		fmt.Printf("\tThe division of %.2f by %.2f == %.2f\n", num1, num2, resultDivision)
+	} else {
+		fmt.Println("\tError: Cannot divide by zero.")
+	}
+
+	fmt.Println("\t--- End calculate ---")
 }
