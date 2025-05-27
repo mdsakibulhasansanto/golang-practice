@@ -21,6 +21,16 @@ func main() {
 		high
 	)
 
+	var input1 string
+	var input2 int
+
+	fmt.Printf("Input %d then Input %d", input1, input2)
+	fmt.Scanln(&input1, &input2)
+
+	//result := input1 + input2
+
+	fmt.Println("Input result : ", input1, input2)
+
 	// Printing the values
 	fmt.Println(low, medium, high)
 	fmt.Println("Value of num:", num)             // Prints the value 10
