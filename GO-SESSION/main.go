@@ -1,9 +1,9 @@
 package main
 
-import "fmt"
-
 func main() {
-
-	fmt.Println("Second module ")
-	fmt.Println("I Love you jan")
+	CalculateGrade()
+	CheckEvenOdd()
 }
+
+// go run .\GO-SESSION\main.go
+//cd myapp , go mod init myapp
