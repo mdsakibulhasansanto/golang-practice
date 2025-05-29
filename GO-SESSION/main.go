@@ -3,7 +3,9 @@ package main
 func main() {
 	//CalculateGrade()
 	//CheckEvenOdd()
-	sumNumber()
+	// sumNumber()
+	//errorCheck()
+	typeConversion()
 }
 
 /*
