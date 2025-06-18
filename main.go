@@ -4,6 +4,6 @@ func main() {
 
 	//array_details()
 	//slice_details()
-	map_details()
-
+	//map_details()
+	struhct_details()
 }
