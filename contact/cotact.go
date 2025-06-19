@@ -10,6 +10,8 @@ type Contact struct {
 	Email string
 }
 
+var name string = "Santo"
+
 type Manager struct {
 	contacts map[string]Contact
 }
@@ -24,6 +26,8 @@ func NewManager() *Manager {
 // Add a new contact
 func (m *Manager) AddContact(c Contact) {
 	m.contacts[c.Email] = c
+	m.contacts[c.Name] = c
+	m.contacts[c.Phone] = c
 }
 
 // Get a contact by email

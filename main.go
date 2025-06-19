@@ -2,10 +2,12 @@ package main
 
 import (
 	"contact-app/contact"
+	reciverfunc "contact-app/contact/reciver_func"
 	"fmt"
 )
 
 func main() {
+
 	manager := contact.NewManager()
 
 	// Add contacts
@@ -31,4 +33,14 @@ func main() {
 	// List again after deletion
 	fmt.Println("\nContacts After Deletion:")
 	manager.ListContacts()
+
+	per := reciverfunc.Person{
+		Name: "Santo",
+		Age:  20,
+	}
+
+	fmt.Println(per)
+	per.Reciver()
+	per.Update()
+
 }
