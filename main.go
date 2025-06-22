@@ -1,35 +1,44 @@
 package main
 
-import "fmt"
-
-// Interface: PlaySong
-type PlaySong interface {
-	SongPlay(songs string) string
-	SongStop() string
-}
-
-// Struct: SongList
-type SongList struct {
-}
-
-// Method: SongPlay (implements PlaySong interface)
-func (s SongList) SongPlay(song string) string {
-	return "Now Playing: " + song
-}
-
-// Method SongStop (implements PlaySong interface)
-func (s SongList) SongStop() string {
-	return "Song Stopped"
-}
+import (
+	"fmt"
+	"net/http"
+)
 
 func main() {
-	// Interface type variable
-	var player PlaySong
+	ch := make(chan string)
 
-	// SongList struct assign করলাম interface variable এ
-	player = SongList{}
+	link := []string{
+		"http://facebook.com",
+		"http://google.com",
+		"http://stackoverflow.com",
+		"http://amazon.com",
+	}
 
-	// Function call
-	fmt.Println(player.SongPlay("Tum Hi Ho"))
-	//fmt.Println(player.SongStop())
+	for _, value := range link {
+		go checkLink(value, ch)
+	}
+
+	// fmt.Println(<-ch)
+	// fmt.Println(<-ch)
+	// fmt.Println(<-ch)
+	// fmt.Println(<-ch)
+
+	for link := range ch {
+		go checkLink(link, ch)
+	}
+}
+
+func checkLink(link string, ch chan string) {
+
+	_, err := http.Get(link)
+
+	if err != nil {
+		fmt.Println("This site down", link)
+		ch <- link
+		return
+	}
+
+	fmt.Println("This site up", link)
+	ch <- link
 }
