@@ -7,7 +7,6 @@ type User struct {
 	Age  int
 }
 
-// Spelling mistake: NmaeGet -> NameGet
 func (u User) NameGet() {
 	fmt.Println(u.Name)
 }
