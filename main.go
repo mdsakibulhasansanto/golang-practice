@@ -105,3 +105,16 @@ func main() {
 		slog.Error("Error starting server", "error", err)
 	}
 }
+
+
+
+
+/*
+
+1/ git init
+2/ git checkout -b basic-server-create
+3/ git commit
+4/ git remote add origin https://github.com/mdsakibulhasansanto/golang-practice.git
+5/ -u 
+
+*/
